@@ -1,24 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Practica1erTrimestre" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiJ-uc-gUS">
+                                <rect key="frame" x="120" y="239" width="150" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Facil"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rq-EP-KqS">
+                                <rect key="frame" x="120" y="374" width="150" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Normal"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige dificulta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXs-5f-DdO">
+                                <rect key="frame" x="120" y="107" width="150" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2L-nE-PJH">
+                                <rect key="frame" x="120" y="509" width="150" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="dificil"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2rq-EP-KqS" firstAttribute="top" secondItem="JiJ-uc-gUS" secondAttribute="bottom" constant="100" id="0z9-jb-caB"/>
+                            <constraint firstItem="cXs-5f-DdO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="EVb-D6-c1g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JiJ-uc-gUS" secondAttribute="trailing" constant="150" id="KqS-SY-SPd"/>
+                            <constraint firstItem="cXs-5f-DdO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="M4Q-HZ-eZ0"/>
+                            <constraint firstItem="JiJ-uc-gUS" firstAttribute="top" secondItem="cXs-5f-DdO" secondAttribute="bottom" constant="50" id="P0U-1R-zIC"/>
+                            <constraint firstAttribute="trailing" secondItem="cXs-5f-DdO" secondAttribute="trailing" constant="120" id="P4D-2f-uNg"/>
+                            <constraint firstItem="JiJ-uc-gUS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="SJg-zD-rM2"/>
+                            <constraint firstItem="o2L-nE-PJH" firstAttribute="top" secondItem="2rq-EP-KqS" secondAttribute="bottom" constant="100" id="SLJ-c3-UKt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o2L-nE-PJH" secondAttribute="trailing" constant="120" id="Uoc-a9-DeE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2rq-EP-KqS" secondAttribute="trailing" constant="120" id="VII-HR-pnh"/>
+                            <constraint firstItem="2rq-EP-KqS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="ZJV-xr-dRd"/>
+                            <constraint firstItem="cXs-5f-DdO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="amj-OP-LzP"/>
+                            <constraint firstItem="JiJ-uc-gUS" firstAttribute="top" secondItem="cXs-5f-DdO" secondAttribute="bottom" constant="100" id="fMT-WA-GXT"/>
+                            <constraint firstItem="2rq-EP-KqS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="h4E-eu-a7S"/>
+                            <constraint firstItem="o2L-nE-PJH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="idV-cC-iUt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JiJ-uc-gUS" secondAttribute="trailing" constant="120" id="kzf-Hp-6Zn"/>
+                            <constraint firstAttribute="trailing" secondItem="o2L-nE-PJH" secondAttribute="trailing" constant="150" id="mRB-er-y2N"/>
+                            <constraint firstItem="o2L-nE-PJH" firstAttribute="top" secondItem="2rq-EP-KqS" secondAttribute="bottom" constant="50" id="mmJ-sn-dvi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cXs-5f-DdO" secondAttribute="trailing" constant="120" id="nUF-FH-6tJ"/>
+                            <constraint firstItem="cXs-5f-DdO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="120" id="rOD-sa-MSm"/>
+                            <constraint firstItem="JiJ-uc-gUS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="rTK-Ra-2qi"/>
+                            <constraint firstItem="o2L-nE-PJH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="tGf-DE-NqI"/>
+                            <constraint firstItem="2rq-EP-KqS" firstAttribute="top" secondItem="JiJ-uc-gUS" secondAttribute="bottom" constant="50" id="xnS-vf-mgF"/>
+                            <constraint firstAttribute="trailing" secondItem="2rq-EP-KqS" secondAttribute="trailing" constant="150" id="zfD-MN-Bnt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KqS-SY-SPd"/>
+                                <exclude reference="Uoc-a9-DeE"/>
+                                <exclude reference="VII-HR-pnh"/>
+                                <exclude reference="kzf-Hp-6Zn"/>
+                                <exclude reference="nUF-FH-6tJ"/>
+                                <exclude reference="EVb-D6-c1g"/>
+                                <exclude reference="M4Q-HZ-eZ0"/>
+                                <exclude reference="P4D-2f-uNg"/>
+                                <exclude reference="amj-OP-LzP"/>
+                                <exclude reference="rOD-sa-MSm"/>
+                                <exclude reference="P0U-1R-zIC"/>
+                                <exclude reference="SJg-zD-rM2"/>
+                                <exclude reference="fMT-WA-GXT"/>
+                                <exclude reference="rTK-Ra-2qi"/>
+                                <exclude reference="0z9-jb-caB"/>
+                                <exclude reference="ZJV-xr-dRd"/>
+                                <exclude reference="h4E-eu-a7S"/>
+                                <exclude reference="xnS-vf-mgF"/>
+                                <exclude reference="zfD-MN-Bnt"/>
+                                <exclude reference="SLJ-c3-UKt"/>
+                                <exclude reference="idV-cC-iUt"/>
+                                <exclude reference="mRB-er-y2N"/>
+                                <exclude reference="mmJ-sn-dvi"/>
+                                <exclude reference="tGf-DE-NqI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="KqS-SY-SPd"/>
+                                <include reference="nUF-FH-6tJ"/>
+                                <include reference="EVb-D6-c1g"/>
+                                <include reference="amj-OP-LzP"/>
+                                <include reference="P0U-1R-zIC"/>
+                                <include reference="SJg-zD-rM2"/>
+                                <include reference="ZJV-xr-dRd"/>
+                                <include reference="xnS-vf-mgF"/>
+                                <include reference="zfD-MN-Bnt"/>
+                                <include reference="mRB-er-y2N"/>
+                                <include reference="mmJ-sn-dvi"/>
+                                <include reference="tGf-DE-NqI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Uoc-a9-DeE"/>
+                                <include reference="VII-HR-pnh"/>
+                                <include reference="kzf-Hp-6Zn"/>
+                                <include reference="M4Q-HZ-eZ0"/>
+                                <include reference="P4D-2f-uNg"/>
+                                <include reference="rOD-sa-MSm"/>
+                                <include reference="fMT-WA-GXT"/>
+                                <include reference="rTK-Ra-2qi"/>
+                                <include reference="0z9-jb-caB"/>
+                                <include reference="h4E-eu-a7S"/>
+                                <include reference="SLJ-c3-UKt"/>
+                                <include reference="idV-cC-iUt"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="46.153846153846153" y="-2.1327014218009479"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
