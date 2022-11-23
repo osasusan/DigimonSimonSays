@@ -33,7 +33,7 @@ class MainVC: UIViewController {
    //     gm.difucultad = numero
    //
    // }
-   //
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ezGame"{
             let destino = segue.destination as! Game

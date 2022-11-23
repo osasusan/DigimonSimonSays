@@ -219,110 +219,147 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="veemon" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-Lk-ayl">
-                                <rect key="frame" x="16" y="111" width="339" height="145"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="rGi-ME-DWs"/>
-                                </constraints>
+                                <rect key="frame" x="36" y="111" width="319" height="119"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUJ-wm-JM1" userLabel="Button 3">
-                                <rect key="frame" x="156" y="1141" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQi-Q2-0Hr" userLabel="Button 4">
-                                <rect key="frame" x="793" y="1120" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFq-Oo-Jri" userLabel="Button 2">
-                                <rect key="frame" x="20" y="366" width="132" height="134"/>
+                                <rect key="frame" x="20" y="340" width="132" height="160"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="gatomon"/>
+                                    <backgroundConfiguration key="background" image="agumon"/>
                                 </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAW-nt-1Mw" userLabel="Button 2">
-                                <rect key="frame" x="20" y="559" width="132" height="134"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="gatomon"/>
-                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addAgumon:" destination="nwn-UQ-2Zu" eventType="touchUpInside" id="9Rk-WZ-wAb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odb-xu-d8Y" userLabel="Button 2">
-                                <rect key="frame" x="223" y="366" width="132" height="134"/>
+                                <rect key="frame" x="223" y="340" width="132" height="160"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="gatomon"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addGatomon:" destination="nwn-UQ-2Zu" eventType="touchUpInside" id="XfZ-lY-tWI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IE3-4a-iac" userLabel="Button 2">
-                                <rect key="frame" x="223" y="559" width="132" height="134"/>
+                                <rect key="frame" x="223" y="559" width="132" height="144"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="gatomon"/>
+                                    <backgroundConfiguration key="background" image="veemon"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addVeemon:" destination="nwn-UQ-2Zu" eventType="touchUpInside" id="d7i-JW-V1s"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cosa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4d-7P-N7o">
-                                <rect key="frame" x="118" y="294" width="134" height="21"/>
+                                <rect key="frame" x="118" y="268" width="134" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAW-nt-1Mw" userLabel="Button 2">
+                                <rect key="frame" x="20" y="559" width="132" height="144"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="guilmon"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addGuilmon:" destination="nwn-UQ-2Zu" eventType="touchUpInside" id="STJ-mo-Wgf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jKf-4e-9b8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jKf-4e-9b8" firstAttribute="trailing" secondItem="odb-xu-d8Y" secondAttribute="trailing" constant="20" id="0jB-Zj-HCk"/>
                             <constraint firstItem="a4d-7P-N7o" firstAttribute="leading" secondItem="jKf-4e-9b8" secondAttribute="leading" constant="118" id="11f-4l-aJ1"/>
-                            <constraint firstAttribute="trailing" secondItem="EQi-Q2-0Hr" secondAttribute="trailing" constant="-493" id="1et-6w-1Yq"/>
                             <constraint firstItem="a4d-7P-N7o" firstAttribute="top" secondItem="cIt-Lk-ayl" secondAttribute="bottom" constant="38" id="3Zh-sa-rR0"/>
-                            <constraint firstItem="EQi-Q2-0Hr" firstAttribute="leading" secondItem="IUJ-wm-JM1" secondAttribute="trailing" constant="562" id="48a-a8-uXy"/>
                             <constraint firstItem="jKf-4e-9b8" firstAttribute="trailing" secondItem="XFq-Oo-Jri" secondAttribute="trailing" constant="223" id="4hO-91-tGJ"/>
                             <constraint firstItem="IE3-4a-iac" firstAttribute="leading" secondItem="jKf-4e-9b8" secondAttribute="leading" constant="223" id="5Ie-8k-uJ3"/>
                             <constraint firstItem="jKf-4e-9b8" firstAttribute="trailing" secondItem="fAW-nt-1Mw" secondAttribute="trailing" constant="223" id="5Ti-CH-3ey"/>
                             <constraint firstItem="jKf-4e-9b8" firstAttribute="bottom" secondItem="odb-xu-d8Y" secondAttribute="bottom" constant="278" id="5kA-on-b63"/>
-                            <constraint firstItem="EQi-Q2-0Hr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GQ5-qg-ob0" secondAttribute="leading" symbolic="YES" id="C1t-aS-QNa"/>
                             <constraint firstItem="odb-xu-d8Y" firstAttribute="leading" secondItem="jKf-4e-9b8" secondAttribute="leading" constant="223" id="CWt-he-K53"/>
                             <constraint firstItem="fAW-nt-1Mw" firstAttribute="top" secondItem="XFq-Oo-Jri" secondAttribute="bottom" constant="59" id="Deb-sg-wLd"/>
-                            <constraint firstItem="EQi-Q2-0Hr" firstAttribute="top" secondItem="GQ5-qg-ob0" secondAttribute="top" constant="1120" id="GFO-ID-sYH"/>
                             <constraint firstItem="XFq-Oo-Jri" firstAttribute="top" secondItem="cIt-Lk-ayl" secondAttribute="bottom" constant="110" id="GhS-B4-eVT"/>
-                            <constraint firstItem="IUJ-wm-JM1" firstAttribute="top" secondItem="GQ5-qg-ob0" secondAttribute="top" constant="1141" id="K6b-hh-c1p"/>
-                            <constraint firstItem="cIt-Lk-ayl" firstAttribute="leading" secondItem="GQ5-qg-ob0" secondAttribute="leadingMargin" id="Kf3-sO-rGT"/>
+                            <constraint firstItem="cIt-Lk-ayl" firstAttribute="leading" secondItem="GQ5-qg-ob0" secondAttribute="leadingMargin" constant="20" id="Kf3-sO-rGT"/>
                             <constraint firstItem="odb-xu-d8Y" firstAttribute="top" secondItem="cIt-Lk-ayl" secondAttribute="bottom" constant="110" id="TIV-hU-Hba"/>
                             <constraint firstItem="jKf-4e-9b8" firstAttribute="bottom" secondItem="XFq-Oo-Jri" secondAttribute="bottom" constant="278" id="Tu0-bA-HGp"/>
-                            <constraint firstItem="jKf-4e-9b8" firstAttribute="bottom" secondItem="fAW-nt-1Mw" secondAttribute="bottom" constant="85" id="bYO-Df-Ene"/>
+                            <constraint firstItem="jKf-4e-9b8" firstAttribute="bottom" secondItem="fAW-nt-1Mw" secondAttribute="bottom" constant="75" id="bYO-Df-Ene"/>
                             <constraint firstItem="cIt-Lk-ayl" firstAttribute="top" secondItem="jKf-4e-9b8" secondAttribute="top" constant="20" id="czb-nz-MUp"/>
                             <constraint firstItem="jKf-4e-9b8" firstAttribute="trailing" secondItem="a4d-7P-N7o" secondAttribute="trailing" constant="123" id="iIq-2Y-zCt"/>
                             <constraint firstItem="IE3-4a-iac" firstAttribute="top" secondItem="odb-xu-d8Y" secondAttribute="bottom" constant="59" id="jse-Bk-GA1"/>
                             <constraint firstItem="XFq-Oo-Jri" firstAttribute="leading" secondItem="jKf-4e-9b8" secondAttribute="leading" constant="20" id="mA9-QA-s0R"/>
                             <constraint firstItem="jKf-4e-9b8" firstAttribute="trailing" secondItem="IE3-4a-iac" secondAttribute="trailing" constant="20" id="mfZ-GR-gh1"/>
-                            <constraint firstItem="jKf-4e-9b8" firstAttribute="bottom" secondItem="IE3-4a-iac" secondAttribute="bottom" constant="85" id="pz0-1A-uUz"/>
+                            <constraint firstItem="jKf-4e-9b8" firstAttribute="bottom" secondItem="IE3-4a-iac" secondAttribute="bottom" constant="75" id="pz0-1A-uUz"/>
                             <constraint firstItem="fAW-nt-1Mw" firstAttribute="leading" secondItem="jKf-4e-9b8" secondAttribute="leading" constant="20" id="ubw-gg-XRz"/>
                             <constraint firstItem="jKf-4e-9b8" firstAttribute="trailing" secondItem="cIt-Lk-ayl" secondAttribute="trailing" constant="20" id="vy9-Cl-6mo"/>
-                            <constraint firstItem="IUJ-wm-JM1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GQ5-qg-ob0" secondAttribute="leading" symbolic="YES" id="ye6-0m-9zz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="0jB-Zj-HCk"/>
+                                <exclude reference="4hO-91-tGJ"/>
+                                <exclude reference="5Ti-CH-3ey"/>
+                                <exclude reference="5kA-on-b63"/>
+                                <exclude reference="Tu0-bA-HGp"/>
+                                <exclude reference="bYO-Df-Ene"/>
+                                <exclude reference="iIq-2Y-zCt"/>
+                                <exclude reference="mfZ-GR-gh1"/>
+                                <exclude reference="pz0-1A-uUz"/>
                                 <exclude reference="vy9-Cl-6mo"/>
+                                <exclude reference="Kf3-sO-rGT"/>
                                 <exclude reference="czb-nz-MUp"/>
+                                <exclude reference="11f-4l-aJ1"/>
+                                <exclude reference="3Zh-sa-rR0"/>
+                                <exclude reference="GhS-B4-eVT"/>
+                                <exclude reference="mA9-QA-s0R"/>
+                                <exclude reference="CWt-he-K53"/>
+                                <exclude reference="TIV-hU-Hba"/>
+                                <exclude reference="Deb-sg-wLd"/>
+                                <exclude reference="ubw-gg-XRz"/>
+                                <exclude reference="5Ie-8k-uJ3"/>
+                                <exclude reference="jse-Bk-GA1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="0jB-Zj-HCk"/>
+                                <include reference="4hO-91-tGJ"/>
+                                <include reference="5Ti-CH-3ey"/>
+                                <include reference="5kA-on-b63"/>
+                                <include reference="Tu0-bA-HGp"/>
+                                <include reference="bYO-Df-Ene"/>
+                                <include reference="iIq-2Y-zCt"/>
+                                <include reference="mfZ-GR-gh1"/>
+                                <include reference="pz0-1A-uUz"/>
                                 <include reference="vy9-Cl-6mo"/>
+                                <include reference="Kf3-sO-rGT"/>
                                 <include reference="czb-nz-MUp"/>
+                                <include reference="11f-4l-aJ1"/>
+                                <include reference="3Zh-sa-rR0"/>
+                                <include reference="GhS-B4-eVT"/>
+                                <include reference="mA9-QA-s0R"/>
+                                <include reference="CWt-he-K53"/>
+                                <include reference="TIV-hU-Hba"/>
+                                <include reference="Deb-sg-wLd"/>
+                                <include reference="ubw-gg-XRz"/>
+                                <include reference="5Ie-8k-uJ3"/>
+                                <include reference="jse-Bk-GA1"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Game" id="rHH-ff-CBv"/>
                     <connections>
+                        <outlet property="btAgumon" destination="XFq-Oo-Jri" id="gPb-Ly-ng7"/>
+                        <outlet property="btGatomon" destination="odb-xu-d8Y" id="yaE-x3-aWX"/>
+                        <outlet property="btGulmon" destination="fAW-nt-1Mw" id="roQ-2h-1mw"/>
+                        <outlet property="btVeemon" destination="IE3-4a-iac" id="uOo-SD-Eba"/>
                         <outlet property="ivDigimon" destination="cIt-Lk-ayl" id="ru2-KM-o0h"/>
                         <outlet property="tvpreba" destination="a4d-7P-N7o" id="UC6-dG-L7g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5s1-6R-j3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034" y="13"/>
+            <point key="canvasLocation" x="2033.497536945813" y="12"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9WC-i3-Bni">
@@ -347,7 +384,9 @@
         <segue reference="5Wq-Y4-RcF"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="agumon" width="320" height="326"/>
         <image name="gatomon" width="213.33332824707031" height="217.66667175292969"/>
+        <image name="guilmon" width="213.33332824707031" height="289.33334350585938"/>
         <image name="veemon" width="113.33333587646484" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
