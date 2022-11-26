@@ -38,36 +38,63 @@ class Game : UIViewController {
         
         if difucultad == "1"{
             ezGame()
-          
             
+        }else if difucultad == "2"{
+            normalGame()
+        }else {
+            difGame()
         }
         
             
     }
-  
     
     @IBAction func addAgumon(_ sender: Any) {
         correcion.append(UIImage(named: "agumon"))
-        tvpreba.text = correcion.count.description
-        checCorretion()
-        
+        checkArray()
     }
-    
     @IBAction func addGatomon(_ sender: Any) {
         correcion.append(UIImage(named: "gatomon"))
-        checCorretion()
+       checkArray()
     }
-    
     @IBAction func addGuilmon(_ sender: Any) {
         correcion.append(UIImage(named: "guilmon"))
-        checCorretion()
+       checkArray()
     }
-    
     @IBAction func addVeemon(_ sender: Any) {
         correcion.append(UIImage(named: "veemon"))
-        checCorretion()
+        checkArray()
     }
+    
     func ezGame(){
+        enabledButton()
+        changeImage()
+        DispatchQueue.main.async {
+            sleep(2)
+            self.imageNil()
+            DispatchQueue.main.async {
+                sleep(3)
+                self.changeImage()
+                DispatchQueue.main.async {
+                    sleep(3)
+                    self.imageNil()
+                    DispatchQueue.main.async {
+                        sleep(3)
+                        self.changeImage()
+                        DispatchQueue.main.async {
+                            sleep(3)
+                            self.imageNil()
+                            DispatchQueue.main.async {
+                                sleep(3)
+                                self.changeImage()
+                                self.abledButton()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    func normalGame(){
         enabledButton()
         changeImage()
         DispatchQueue.main.async {
@@ -88,7 +115,15 @@ class Game : UIViewController {
                             DispatchQueue.main.async {
                                 sleep(3)
                                 self.changeImage()
-                                self.abledButton()
+                                DispatchQueue.main.async {
+                                    sleep(3)
+                                    self.imageNil()
+                                    DispatchQueue.main.async {
+                                        sleep(3)
+                                        self.changeImage()
+                                        self.abledButton()
+                                    }
+                                }
                             }
                         }
                     }
@@ -96,10 +131,52 @@ class Game : UIViewController {
             }
         }
     }
-    func normalGame(){
-        
-    }
     func difGame(){
+        enabledButton()
+        changeImage()
+        DispatchQueue.main.async {
+            sleep(2)
+            self.imageNil()
+            DispatchQueue.main.async {
+                sleep(3)
+                self.changeImage()
+                DispatchQueue.main.async {
+                    sleep(3)
+                    self.imageNil()
+                    DispatchQueue.main.async {
+                        sleep(3)
+                        self.changeImage()
+                        DispatchQueue.main.async {
+                            sleep(1)
+                            self.imageNil()
+                            DispatchQueue.main.async {
+                                sleep(3)
+                                self.changeImage()
+                                DispatchQueue.main.async {
+                                    sleep(3)
+                                    self.imageNil()
+                                    DispatchQueue.main.async {
+                                        sleep(3)
+                                        self.changeImage()
+                                        DispatchQueue.main.async {
+                                            sleep(3)
+                                            self.imageNil()
+                                            DispatchQueue.main.async {
+                                                sleep(3)
+                                                self.changeImage()
+                                                self.abledButton()
+                                                
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         
     }
     func getRandom(){
@@ -146,26 +223,36 @@ class Game : UIViewController {
             
         }
         
-        
     }
-    func checCorretion(){
-        if correcion.count == 4{
-            
-            enabledButton()
+    func checCorretion(numer: Int ){
+        if correcion.count == numer {
             comprobation()
+            enabledButton()
+            
         }
-        
+    
     }
     func enabledButton(){
         btAgumon.isEnabled = false
         btGatomon.isEnabled = false
         btGulmon.isEnabled = false
-        btAgumon.isEnabled = false
+        btVeemon.isEnabled = false
     }
     func abledButton(){
         btAgumon.isEnabled = true
         btGatomon.isEnabled = true
         btGulmon.isEnabled = true
-        btAgumon.isEnabled = true
+        btVeemon.isEnabled = true
+    }
+    func checkArray() {
+        tvpreba.text = correcion.count.description
+        if difucultad == "1"{
+            checCorretion(numer: 4)
+        }else if difucultad == "2"{
+            checCorretion(numer: 5)
+        }else {
+            checCorretion(numer: 6)
+        }
+    
     }
 }
