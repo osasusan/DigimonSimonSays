@@ -11,43 +11,36 @@ class Game : UIViewController {
     
     var difucultad : String?
     var correctAnswer = 0
-    var pez = 0
+    var life  = 0
+    var vidas = 0
     
+    var points  = 0
     var copia : [UIImage?] = []
     var correcion : [UIImage?] = []
     let digimon = [UIImage(named: "agumon"),UIImage(named:  "gatomon"),UIImage(named:  "guilmon"),UIImage(named: "veemon")]
     
+    @IBOutlet weak var tvLife: UILabel!
+    @IBOutlet weak var tvPoints: UILabel!
+    
     @IBOutlet weak var btAgumon: UIButton!
-    
     @IBOutlet weak var btGatomon: UIButton!
-    
     @IBOutlet weak var btGulmon: UIButton!
-    
-    
     @IBOutlet weak var btVeemon: UIButton!
     
     @IBOutlet weak var ivDigimon: UIImageView!
     
+    @IBOutlet weak var btRepit: UIBarButtonItem!
     @IBOutlet weak var tvpreba: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         
-        self.ivDigimon.image = nil
-       
         tvpreba.text = difucultad
+        btRepit.tintColor = UIColor.gray
+        tvPoints.text = "Puntos: \(points.description)"
+        levelSelec()
         
-        if difucultad == "1"{
-            ezGame()
-            
-        }else if difucultad == "2"{
-            normalGame()
-        }else {
-            difGame()
-        }
-        
-            
     }
-    
     @IBAction func addAgumon(_ sender: Any) {
         correcion.append(UIImage(named: "agumon"))
         checkArray()
@@ -64,29 +57,36 @@ class Game : UIViewController {
         correcion.append(UIImage(named: "veemon"))
         checkArray()
     }
-    
+    @IBAction func repit(_ sender: Any) {
+        levelSelec()
+    }
     func ezGame(){
         enabledButton()
-        changeImage()
-        DispatchQueue.main.async {
-            sleep(2)
-            self.imageNil()
+        btRepit.isEnabled = false
+        imageNil()
+        DispatchQueue.main.async{
+            sleep(3)
+            self.changeImage()
             DispatchQueue.main.async {
-                sleep(3)
-                self.changeImage()
+                sleep(2)
+                self.imageNil()
                 DispatchQueue.main.async {
                     sleep(3)
-                    self.imageNil()
+                    self.changeImage()
                     DispatchQueue.main.async {
-                        sleep(3)
-                        self.changeImage()
+                        sleep(2)
+                        self.imageNil()
                         DispatchQueue.main.async {
                             sleep(3)
-                            self.imageNil()
+                            self.changeImage()
                             DispatchQueue.main.async {
-                                sleep(3)
-                                self.changeImage()
-                                self.abledButton()
+                                sleep(2)
+                                self.imageNil()
+                                DispatchQueue.main.async {
+                                    sleep(3)
+                                    self.changeImage()
+                                    self.abledButton()
+                                }
                             }
                         }
                     }
@@ -96,32 +96,37 @@ class Game : UIViewController {
     }
     func normalGame(){
         enabledButton()
-        changeImage()
-        DispatchQueue.main.async {
-            sleep(2)
-            self.imageNil()
+        btRepit.isEnabled = false
+        imageNil()
+        DispatchQueue.main.async{
+            sleep(3)
+            self.changeImage()
             DispatchQueue.main.async {
-                sleep(3)
-                self.changeImage()
+                sleep(2)
+                self.imageNil()
                 DispatchQueue.main.async {
                     sleep(3)
-                    self.imageNil()
+                    self.changeImage()
                     DispatchQueue.main.async {
-                        sleep(3)
-                        self.changeImage()
+                        sleep(2)
+                        self.imageNil()
                         DispatchQueue.main.async {
-                            sleep(1)
-                            self.imageNil()
+                            sleep(3)
+                            self.changeImage()
                             DispatchQueue.main.async {
-                                sleep(3)
-                                self.changeImage()
+                                sleep(2)
+                                self.imageNil()
                                 DispatchQueue.main.async {
                                     sleep(3)
-                                    self.imageNil()
+                                    self.changeImage()
                                     DispatchQueue.main.async {
-                                        sleep(3)
-                                        self.changeImage()
-                                        self.abledButton()
+                                        sleep(2)
+                                        self.imageNil()
+                                        DispatchQueue.main.async {
+                                            sleep(3)
+                                            self.changeImage()
+                                            self.abledButton()
+                                        }
                                     }
                                 }
                             }
@@ -133,42 +138,46 @@ class Game : UIViewController {
     }
     func difGame(){
         enabledButton()
-        changeImage()
-        DispatchQueue.main.async {
-            sleep(2)
-            self.imageNil()
+        btRepit.isEnabled = false
+        imageNil()
+        DispatchQueue.main.async{
+            sleep(3)
+            self.changeImage()
             DispatchQueue.main.async {
-                sleep(3)
-                self.changeImage()
+                sleep(2)
+                self.imageNil()
                 DispatchQueue.main.async {
                     sleep(3)
-                    self.imageNil()
+                    self.changeImage()
                     DispatchQueue.main.async {
-                        sleep(3)
-                        self.changeImage()
+                        sleep(2)
+                        self.imageNil()
                         DispatchQueue.main.async {
-                            sleep(1)
-                            self.imageNil()
+                            sleep(3)
+                            self.changeImage()
                             DispatchQueue.main.async {
-                                sleep(3)
-                                self.changeImage()
+                                sleep(2)
+                                self.imageNil()
                                 DispatchQueue.main.async {
                                     sleep(3)
-                                    self.imageNil()
+                                    self.changeImage()
                                     DispatchQueue.main.async {
                                         sleep(3)
-                                        self.changeImage()
+                                        self.imageNil()
                                         DispatchQueue.main.async {
                                             sleep(3)
-                                            self.imageNil()
+                                            self.changeImage()
                                             DispatchQueue.main.async {
                                                 sleep(3)
-                                                self.changeImage()
-                                                self.abledButton()
-                                                
+                                                self.imageNil()
+                                                DispatchQueue.main.async {
+                                                    sleep(3)
+                                                    self.changeImage()
+                                                    self.abledButton()
+                                                    
+                                                }
                                             }
                                         }
-                                        
                                     }
                                 }
                             }
@@ -177,16 +186,14 @@ class Game : UIViewController {
                 }
             }
         }
-        
     }
     func getRandom(){
         // let deadline = Date().advanced(by: 2)
         //Thread.sleep(until: deadline)
         correctAnswer = Int.random(in: 0...3)
         ivDigimon.image = digimon[correctAnswer]
-       
     }
-    func changeImage(){
+   func changeImage(){
         
         UIView.transition(with: self.ivDigimon,
                           duration: 4.0,
@@ -195,15 +202,12 @@ class Game : UIViewController {
             self.getRandom()
         }, completion: nil)
         getCopi()
-     
     }
-        
     func getCopi(){
         let nombre = ivDigimon.image!
         copia.append(nombre)
         let nana = copia.count
         tvpreba.text = nana.description
-        
    }
     func imageNil(){
         UIView.transition(with: self.ivDigimon,
@@ -215,22 +219,20 @@ class Game : UIViewController {
     }
     func comprobation(){
         if copia.elementsEqual(correcion){
-           
             tvpreba.text = "correcto"
-        }else {
-          
-            tvpreba.text = "incorrecto"
+            sleep(2)
+            lifeAndPointos()
             
+        }else {
+            tvpreba.text = "incorrecto"
+            lifeAndPointos()
         }
-        
     }
     func checCorretion(numer: Int ){
         if correcion.count == numer {
             comprobation()
             enabledButton()
-            
         }
-    
     }
     func enabledButton(){
         btAgumon.isEnabled = false
@@ -253,6 +255,58 @@ class Game : UIViewController {
         }else {
             checCorretion(numer: 6)
         }
-    
+    }
+    func levelSelec(){
+        if difucultad == "1"{
+            vidas = 5
+            vidas = vidas - life
+            tvLife.text = "Vidas: \(vidas.description)"
+            vidas = 5
+            ezGame()
+            
+            
+        }else if difucultad == "2"{
+            vidas = 3
+            vidas -= life
+            tvLife.text = "Vidas: \(vidas.description)"
+            vidas = 3
+            normalGame()
+            
+        }else {
+            vidas = 1
+            vidas -= life
+            tvLife.text = "Vidas: \(vidas.description)"
+            vidas = 1
+            
+            difGame()
+        }
+    }
+    func lifeAndPointos(){
+        if tvpreba.text == "correcto"{
+            points += 10
+            btRepit.isEnabled = false
+            btRepit.tintColor = UIColor.gray
+            tvPoints.text = "Puntos: \(points.description)"
+            
+            if points < 50{
+                levelSelec()
+                copia.removeAll()
+                correcion.removeAll()
+            }else{
+                tvpreba.text = "nivel superado"
+            }
+        }else if tvpreba.text == "incorrecto"{
+            life += 1
+            vidas -= life
+            copia.removeAll()
+            correcion.removeAll()
+            btRepit.isEnabled = true
+            btRepit.tintColor = UIColor.blue
+            tvLife.text = "Vidas: \(vidas.description)"
+            if vidas == 0 {
+                tvpreba.text = "GAME OVER"
+                btRepit.isEnabled = false
+            }
+        }
     }
 }
